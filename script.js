@@ -14,20 +14,29 @@ articles.forEach(article => {
                 instruction.style.display = "none";
             });
             unselected_instruction_box.forEach(instruction => {
-                instruction.style.display = "block";
+                instruction.style.display = "flex";
             });
             article.style.pointerEvents = "none";
             setTimeout(() => {
                 article.style.pointerEvents = "auto";
             }, 760);
+            article.style.position = "fixed";
             article.style.display = "block";
             article.style.width = "100%";
             article.classList.add("selected");
         }else{
             articles.forEach(article => {
                 setTimeout(() => {
-                    article.style.display = "block";
+                    article.style.display = "flex";
                     article.style.pointerEvents = "auto";
+                    article.style.position = "relative";
+                    article.classList.remove("selected");
+                    instruction_box.forEach(instruction => {
+                        instruction.style.display = "flex";
+                    });
+                    unselected_instruction_box.forEach(instruction => {
+                        instruction.style.display = "none";
+                    });
                 }, 760);
                 if(window.screen.width > 700){
                     article.style.width = "33%";
@@ -35,14 +44,9 @@ articles.forEach(article => {
                     article.style.width = "70%";
                 };
             });
-            instruction_box.forEach(instruction => {
-                instruction.style.display = "block";
-            });
-            unselected_instruction_box.forEach(instruction => {
-                instruction.style.display = "none";
-            });
+            
             article.style.pointerEvents = "none";
-            article.classList.remove("selected");
+            
         };
         
     });
