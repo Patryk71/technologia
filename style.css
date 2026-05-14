@@ -233,6 +233,10 @@ footer{
             width: 80%;
         }
 
+        .instructionbox{
+            font-size: 10px;
+        }
+
     }
 }
 
