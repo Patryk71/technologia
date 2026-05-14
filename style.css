@@ -41,7 +41,6 @@ header {
 .container{
     flex-direction: row;
     justify-content: left;
-    height: calc(var(--hero_heigth) - 20px);
 }
 nav{
     height:auto;
@@ -134,8 +133,7 @@ main{
     border-radius: 20px;
     border: 2px solid var(--main);
     box-shadow: none;
-    transition: border 0.3s linear;
-    transition: width 0.76s linear;
+    transition: border 0.3s linear, width 0.76s linear, box-shadow 0.3s linear;
     position: relative;
     background-color: rgba(0, 0, 0, 0.765);
     height: 500px;
@@ -145,8 +143,7 @@ main{
 .box:hover{
     cursor: pointer;
     border: 2px solid white;
-    transition: border 0.3s linear;
-    transition: width 0.76s linear;
+    transition: border-color 0.3s linear, width 0.76s linear, box-shadow 0.3s linear;
     box-shadow: 0px 0px 15px white;
 }
 .box>.contentbox{
@@ -226,6 +223,9 @@ footer{
     .instructionbox{
         font-size: 15px;
     }
+    .unselected_instructionbox{
+        font-size: 15px;
+    }
     @media (max-width: 700px) {
         header{
             font-size: 12px;
@@ -249,6 +249,9 @@ footer{
             position: relative;
         }
         .instructionbox{
+            font-size: 13px;
+        }
+        .unselected_instructionbox{
             font-size: 13px;
         }
         .selected>.contentbox{
