@@ -140,7 +140,7 @@ main{
     position: relative;
     background-color: rgba(0, 0, 0, 0.765);
     height: 500px;
-    min-width: 250px;
+    min-width: 255px;
     max-width: 85%;
 }
 .box:hover{
