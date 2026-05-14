@@ -53,7 +53,6 @@ articles.forEach(article => {
 
 });
 function resize(){
-    
     articles.forEach(article => {
         if(window.screen.width > 700){
             if(!article.classList.contains("selected")){
