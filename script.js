@@ -84,7 +84,7 @@ click_to_swipe.addEventListener('click', function(){
 
 
 const prices = {
-   host:300
+   host:300 
 };
 document.addEventListener("DOMContentLoaded", function() {
         const produkt = "host"; 
