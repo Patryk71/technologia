@@ -95,7 +95,9 @@ document.addEventListener("DOMContentLoaded", function() {
 function showPrice(productName, elementId) {
     const outputElement = document.getElementById(elementId);
     if (prices.hasOwnProperty(productName)) {
-        outputElement.textContent = prices[productName] + " zł";
+        if(outputElement){
+            outputElement.textContent = prices[productName] + " zł";
+        };
     } else {
         outputElement.textContent = "Produkt niedostępny";
     }
